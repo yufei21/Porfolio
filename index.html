@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu & Bài Tập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-img"></div>
+    <div class="container">
+        <div class="profile">
+            <h1>Ôn Ngọc Phi</h1>
+        </div>
+        <div class="nav">
+            <a href="#" onclick="showContent('intro')">Giới Thiệu</a>
+            <a href="#" onclick="showContent('baiTap')">Bài Tập</a>
+        </div>
+        <div id="intro" class="content">
+            <h2>Giới Thiệu</h2>
+            <div class="intro-container">
+                <div class="intro-text">
+                    <p>Họ và tên: Ôn Ngọc Phi</p>
+                    <p>Ngày sinh: 02/01/2006</p>
+                    <p>Quê quán: Quảng Ninh</p>
+                    <p>Trình độ học vấn: Đại học</p>
+                    <p>Ngành học: Công nghệ thông tin</p>
+                    <p>Sở thích: Nghe nhạc, chơi game</p>
+                    <p class="social-label">Liên kết:</p>
+                    <div class="social-buttons">
+                        <a href="https://www.facebook.com/yufei21" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/onp.02_01/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <img src="https://i.pinimg.com/736x/49/cd/19/49cd193f59fba16e8b56f2513009fe38.jpg" alt="Ảnh cá nhân">
+                </div>
+            </div>
+        </div>
+        <div id="baiTap" class="content">
+            <h2>Danh Sách Bài Tập</h2>
+            <label for="sessionSelect">Chọn buổi:</label>
+            <select id="sessionSelect" onchange="showSession()">
+                <option value="all">Tất cả</option>
+                <option value="buoi1">Buổi 1</option>
+                <option value="buoi2">Buổi 2</option>
+                <option value="buoi3">Buổi 3</option>
+                <option value="buoi4">Buổi 4</option>
+                <option value="buoi5">Buổi 5</option>
+                <option value="buoi6">Buổi 6</option>
+                <option value="buoi7">Buổi 7</option>
+                <option value="buoi8">Buổi 8</option>
+                <option value="buoi9">Buổi 9</option>
+            </select>
+            
+            <ul>
+                <li class="session buoi1">
+                    <details>
+                        <summary>Buổi 1</summary>
+                        <ul>
+                            <li><a href="B1-bt1/index.html">Bài 1</a></li>
+                            <li><a href="B1-bt2_1/index.html">Bài 2.1</a></li>
+                            <li><a href="B1-bt2_2/index.html">Bài 2.2</a></li>
+                            <li><a href="B1-bt2_3/index.html">Bài 2.3</a></li>
+                            <li><a href="B1-bt3/index.html">Bài 3</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="session buoi2">
+                    <details>
+                        <summary>Buổi 2</summary>
+                        <ul>
+                            <li><a href="B2-bt1_inline/index.html">Bài 1 inline</a></li>
+                            <li><a href="B2-bt1_internal/index.html">Bài 1 internal</a></li>
+                            <li><a href="B2-bt1_external/index.html">Bài 1 external</a></li>
+                            <li><a href="B2-bt2_1/index.html">Bài 2.1</a></li>
+                            <li><a href="B2-bt2_2/index.html">Bài 2.2</a></li>
+                            <li><a href="B2-bt2_3/index.html">Bài 2.3</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="session buoi3">
+                    <details>
+                        <summary>Buổi 3</summary>
+                        <ul>
+                            <li><a href="B3-bt1_1/index.html">Bài 1.1</a></li>
+                            <li><a href="B3-bt1_2/index.html">Bài 1.2</a></li>
+                            <li><a href="B3-bt2/index.html">Bài 2</a></li>
+                            <li><a href="B3-bt3/index.html">Bài 3</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="session buoi4">
+                    <details>
+                        <summary>Buổi 4</summary>
+                        <ul>
+                            <li><a href="B4-bt1/index.html">Bài 1</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="session buoi5">
+                    <details>
+                        <summary>Buổi 5</summary>
+                        <ul>
+                            <li><a href="B5-bt1/index.html">Bài 1</a></li>
+                            <li><a href="B5-bt2/index.html">Bài 2</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="session buoi6">
+                    <details>
+                        <summary>Buổi 6</summary>
+                        <ul>
+                            <li><a href="B6-bt1/index.html">Bài 1</a></li>
+                            <li><a href="B6-bt2/index.html">Bài 2</a></li>
+                            <li><a href="B6-bt3/index.html">Bài 3</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="session buoi7">
+                    <details>
+                        <summary>Buổi 7</summary>
+                        <ul>
+                            <li><a href="B7-bt/index.html">Bài 1-2-3</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li class="session buoi8">
+                    <details>
+                        <summary>Buổi 8</summary>
+                        <ul>
+                            <li><a href="B8-bt4/index.html">Bài 4</a></li>
+                            <li><a href="B8-bt5/index.html">Bài 5</a></li>
+                            <li><a href="B8-bt6/index.html">Bài 6</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        showContent('intro');
+        });
+        function showContent(id) {
+        document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
+        document.getElementById(id).style.display = 'block';
+        }
+        function showSession() {
+    let selected = document.getElementById("sessionSelect").value;
+    document.querySelectorAll('.session').forEach(item => {
+        if (selected === "all" || item.classList.contains(selected)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+
+    </script>
+</body>
+</html>
