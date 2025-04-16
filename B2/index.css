@@ -1,0 +1,17 @@
+body {
+    background-color: #009294;
+    color: #FFFFFF;
+}
+h3 {
+    font-size: 16pt;
+    color: red;
+}
+h1 {
+    background-color: yellow;
+    text-align: center;
+}
+ol {
+    border-style: dashed;
+    border-width: 4px;
+    border-color: blue;
+}

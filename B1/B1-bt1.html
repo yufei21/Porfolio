@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    <dl>
+        <dt><strong>-HTML BASIC</strong></dt>
+        <dd>
+            <dl>
+                <dt><strong>&lt;!DOCTYPE&gt;:</strong></dt>
+                <dd>Xác định loại tài liệu và giúp trình duyệt hiển thị trang web chính xác. Nó phải xuất hiện một lần duy nhất ở đầu trang, không phân biệt chữ hoa chữ thường.</dd>
+                <dt><strong>HTML Headings:</strong></dt>
+                <dd>HTML sử dụng thẻ <strong>&lt;h1&gt;</strong> đến <strong>&lt;h6&gt;</strong> để xác định tiêu đề.</dd>
+                <dd>
+                    <dl>
+                        <dt><strong>&lt;h1&gt;:</strong> là tiêu đề quan trọng nhất</dt>
+                        <dt><strong>&lt;h6&gt;:</strong> là tiêu đề ít quan trọng nhất</dt>
+                    </dl>
+                </dd>
+                <dt><strong>HTML Paragraphs:</strong></dt>
+                <dd>HTML sử dụng thẻ <strong>&lt;p&gt;</strong> để xác định đoạn văn bản.</dd>
+                <dt><strong>HTML Links:</strong></dt>
+                <dd>HTML sử dụng thẻ <strong>&lt;a&gt;</strong> để xác định liên kết.</dd>
+                <dt><strong>HTML Images:</strong></dt>
+                <dd>HTML sử dụng thẻ <strong>&lt;img&gt;</strong> để hiển thị hình ảnh, với các thuộc tính quan trọng như src, alt, width và height.</dd>
+            </dl>
+        </dd>
+        <dt><strong>-HTML Elements</strong></dt>
+        <dd>
+            <dl>
+                <dt><strong>HTML Elements:</strong></dt>
+                <dd>Một phần tử HTML bao gồm thẻ mở, nội dung và thẻ đóng.
+                    <dl>
+                        <dt><strong>&lt;h1&gt; Tiêu đề:</strong>  &lt;h1&gt;My First Heading&lt;/h1&gt;</dt>
+                        <dt><strong>&lt;p&gt; Đoạn văn:</strong> &lt;p&gt;My first paragraph.&lt;/p&gt;</dt>
+                    </dl>
+                </dd>
+                <dt><strong>Nested HTML Elements:</strong>
+                    <dd>Các phần tử HTML có thể lồng nhau, và mọi tài liệu HTML đều chứa các phần tử này. Ví dụ phổ biến gồm <strong>&lt;html&gt;</strong>, <strong>&lt;body&gt;</strong>, <strong>&lt;h1&gt;</strong> và <strong>&lt;p&gt;</strong>.</dd>
+                </dt>
+                <dt><strong>Never Skip the End Tag:</strong>
+                    <dd>Một số phần tử HTML vẫn hiển thị đúng ngay cả khi bạn quên thẻ đóng, nhưng luôn nên viết đầy đủ để đảm bảo trang web hoạt động chính xác.</dd>
+                </dt>
+                <dt><strong>Empty HTML Elements:</strong>
+                    <dd>Các phần tử HTML không có nội dung được gọi là phần tử rỗng.</dd>
+                </dt>
+            </dl>
+        </dd>
+        <dt><strong>-HTML Attributes</strong></dt>
+        <dd>
+            <dl>
+                <dt><strong>The href Attribute</strong>
+                    <dd>Thẻ &lt;a&gt; dùng để tạo liên kết (hyperlink).Thuộc tính href xác định URL của trang đích.</dd>
+                </dt>
+                <dt>
+                    <strong>The src Attribute</strong> 
+                    <dd>
+                        Thẻ &lt;img&gt; dùng để nhúng hình ảnh vào trang HTML. Thuộc tính src xác định đường dẫn đến hình ảnh.
+                        <dl> <strong> Có hai cách để xác định URL trong thuộc tính src của thẻ &lt;img&gt;</strong>
+                            <dt><strong>URL tuyệt đối:</strong> Dẫn đến ảnh từ trang web khác.
+                                Ví dụ: src="https://www.w3schools.com/images/img_girl.jpg"
+                                Lưu ý: Ảnh bên ngoài có thể bị xóa, thay đổi hoặc vi phạm bản quyền. </dt>
+                            <dt><strong>URL tương đối:</strong> Dẫn đến ảnh nằm trong trang web của bạn.
+                                src="img_girl.jpg" → Ảnh trong thư mục hiện tại.
+                                src="/images/img_girl.jpg" → Ảnh trong thư mục /images/, tính từ gốc trang web.</dt>
+                        </dl>
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>The width and height Attributes</strong>
+                    <dd>
+                        Thẻ &lt;img&gt; nên có các thuộc tính width và height để xác định kích thước hình ảnh (tính bằng pixel).
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>The alt Attribute</strong>
+                    <dd>
+                        Thuộc tính alt trong thẻ &lt;img&gt; cung cấp văn bản thay thế khi hình ảnh không hiển thị do lỗi kết nối, sai đường dẫn hoặc dành cho người dùng sử dụng trình đọc màn hình.
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>The style Attribute</strong>
+                    <dd>
+                        Thuộc tính **`style`** được dùng để thêm **CSS trực tiếp** vào phần tử, như thay đổi **màu sắc, phông chữ, kích thước**, v.v.
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>
+                        The lang Attribute
+                    </strong>
+                    <dd>Bạn nên luôn thêm thuộc tính lang trong thẻ &lt;html&gt; để khai báo ngôn ngữ của trang web. Điều này giúp công cụ tìm kiếm và trình duyệt xử lý nội dung tốt hơn.</dd>
+                </dt>
+                <dt>
+                    <strong>The title Attribute</strong>
+                    <dd>
+                        Thuộc tính title cung cấp thông tin bổ sung về một phần tử.Giá trị của title sẽ hiển thị dưới dạng chú giải (tooltip) khi di chuột qua phần tử.
+                    </dd>
+                </dt>
+            </dl>
+        </dd>
+        <dt><strong>-HTML Headings</strong></dt>
+        <dd>
+            <dl>
+                <dt>
+                    <strong>HTML Headings</strong>
+                    <dd>
+                        <dl>
+                            <dt><strong>&lt;h1&gt;:</strong> là tiêu đề quan trọng nhất</dt>
+                            <dt><strong>&lt;h6&gt;:</strong> là tiêu đề ít quan trọng nhất</dt>
+                        </dl>
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>Headings Are Important</strong>
+                    <dd>
+                        Tiêu đề giúp công cụ tìm kiếm lập chỉ mục và giúp người dùng đọc lướt dễ dàng. Sử dụng &lt;h1&gt; cho tiêu đề chính, &lt;h2&gt; cho tiêu đề phụ, và các mức thấp hơn cho nội dung ít quan trọng hơn.
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>
+                        Bigger Headings
+                    </strong>
+                    <dd>
+                        Mỗi tiêu đề HTML có kích thước mặc định, nhưng bạn có thể tùy chỉnh kích thước bằng thuộc tính style với CSS font-size.
+                    </dd>
+                </dt>
+            </dl>
+        </dd>
+        <dt><strong>-HTML Headings</strong></dt>
+        <dd>
+            <dl>
+                <dt>
+                    <strong>
+                        HTML Paragraphs
+                    </strong>
+                    <dd>
+                        Thẻ &lt;p&gt; dùng để xác định đoạn văn trong HTML.
+Mỗi đoạn văn bắt đầu trên dòng mới, và trình duyệt tự động thêm khoảng trắng (margin) trước và sau đoạn văn.
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>
+                        HTML Display
+                    </strong>
+                    <dd>
+                        Cách hiển thị HTML không cố định, nó thay đổi tùy theo kích thước màn hình và cửa sổ trình duyệt.
+Thêm khoảng trắng hoặc dòng trống trong mã HTML sẽ không ảnh hưởng đến hiển thị.
+Trình duyệt tự động xóa khoảng trắng và dòng trống thừa khi hiển thị trang.
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>
+                        HTML Horizontal Rules
+                    </strong>
+                    <dd>
+                        Thẻ &lt;hr&gt; tạo đường kẻ ngang để phân tách nội dung và không có thẻ đóng.
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>
+                        HTML Line Breaks
+                    </strong>
+                    <dd>
+                        Thẻ &lt;br&gt; tạo dấu ngắt dòng, giúp xuống dòng mà không cần tạo đoạn văn mới.
+Là thẻ rỗng, không có thẻ đóng.
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>
+                        Solution - The HTML &lt;pre&gt; Element
+                    </strong>
+                    <dd>
+                        Thẻ &lt;pre&gt; hiển thị văn bản được định dạng sẵn, giữ nguyên khoảng trắng và dấu xuống dòng.Nội dung bên trong sử dụng phông chữ có chiều rộng cố định (thường là Courier).
+                    </dd>
+                </dt>
+            </dl>
+        </dd>
+        <dt><strong>- HTML Paragraphs</strong></dt>
+        <dd>
+            <dl>
+                <dt><strong>
+                    HTML Paragraphs
+                </strong>
+                <dd>
+                    Phần tử &lt;p &gt; trong HTML xác định một đoạn văn. Đoạn văn luôn bắt đầu trên một dòng mới và trình duyệt tự động thêm khoảng trắng (margin) trước và sau nó.
+                </dd>
+                </dt>
+                <dt>
+                    <strong>
+                        HTML Display
+                    </strong>
+                    <dd>
+                        Bạn không thể chắc chắn cách HTML sẽ hiển thị.
+                        Màn hình lớn, nhỏ hoặc cửa sổ thay đổi kích thước sẽ tạo ra kết quả khác nhau.
+                        Trong HTML, bạn không thể thay đổi hiển thị bằng cách thêm khoảng trắng hoặc dòng trống trong mã.
+                        Trình duyệt sẽ tự động loại bỏ các khoảng trắng và dòng trống thừa khi hiển thị trang.
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>
+                        HTML Horizontal Rules
+                    </strong>
+                    <dd>
+                        Thẻ <strong>&lt;hr&gt; </strong>  xác định một ngắt dòng theo chủ đề trong trang HTML, và thường được hiển thị dưới dạng một đường kẻ ngang.
+                        Phần tử <strong>&lt;hr&gt; </strong> được sử dụng để phân tách nội dung (hoặc xác định một sự thay đổi) trong trang HTML.
+                    </dd>
+                </dt>
+                <dt>
+                    <strong>
+                        HTML Line Breaks
+                    </strong>
+                    <dd>
+                        Phần tử <strong>&lt;br&gt; </strong> trong HTML dùng để ngắt dòng mà không bắt đầu một đoạn văn mới.
+                    </dd>
+                </dt>
+            </dl>
+        </dd>
+
+
+    <dt><strong>- HTML Styles</strong></dt>
+    <dd>
+        <dl>
+            <dt>
+                <strong>
+                    The HTML Style Attribute
+                </strong>
+                <dd>
+                    Cài đặt kiểu cho một phần tử HTML có thể thực hiện thông qua thuộc tính style.
+                    Thuộc tính style trong HTML có cú pháp sau:
+                    <strong>
+                        &lt;tagname style="property:value;"&gt;
+                    </strong>
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    Background Color
+                </strong>
+                <dd>
+                    Thuộc tính background-color trong CSS xác định màu nền cho một phần tử HTML. VD:
+                    <strong>&lt;h1 style="background-color:powderblue;"&gt;This is a heading&lt;/h1&gt;</strong>
+                    <h1 style="background-color:powderblue;">This is a heading</h1>
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    Text Color
+                </strong>
+                <dd>
+                    Thuộc tính color trong CSS xác định màu văn bản cho một phần tử HTML. VD:
+                    <strong>&lt;h1 style="color:red;"&gt;This is a heading&lt;/h1&gt;</strong>
+                    <h1 style="color:red;">This is a heading</h1>
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    Fonts
+                </strong>
+                <dd>
+                    Thuộc tính font-family trong CSS xác định phông chữ sẽ được sử dụng cho một phần tử HTML. VD:
+                    <strong>&lt;h1 style="font-family:verdana;"&gt;This is a heading&lt;/h1&gt;</strong>
+                    <h1 style="font-family:verdana;">This is a heading</h1>
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    Text Size
+                </strong>
+                <dd>
+                    Thuộc tính font-size trong CSS xác định kích thước văn bản cho một phần tử HTML. VD:
+                    <strong>&lt;h1 style="font-size:300%;"&gt;This is a heading&lt;/h1&gt;</strong>
+                    <h1 style="font-size:300%;">This is a heading</h1>
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    Text Alignment
+                </strong>
+                <dd>
+                    Thuộc tính text-align trong CSS xác định căn chỉnh văn bản theo chiều ngang cho một phần tử HTML. VD:
+                    <strong>&lt;h1 style="text-align:center;"&gt;This is a heading&lt;/h1&gt;</strong>
+                    <h1 style="text-align:center;">This is a heading</h1>
+                </dd>
+            </dt>
+        </dl>
+    </dd>
+
+    <dt><strong>- HTML Text Formatting</strong></dt>
+    <dd>
+        <dl>
+            <dt>
+                <strong>
+                    HTML &lt;b&gt; and &lt;strong&gt; Elements
+                </strong>
+                <dd>
+                    <p><b>&lt;b&gt;</b> thường dùng để in đậm văn bản mà không mang ý nghĩa về mặt ngữ nghĩa.</p>
+                    <p><strong>&lt;strong&gt;</strong> không chỉ làm văn bản in đậm mà còn biểu thị rằng văn bản đó quan trọng hơn về mặt ngữ nghĩa.</p>
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;i&gt; and &lt;em&gt; Elements
+                </strong>
+                <dd>
+                    <p><strong>
+                        &lt;i&gt;
+                    </strong> <i>thường dùng để in nghiêng văn bản mà không mang ý nghĩa ngữ nghĩa.</i></p>
+                    <p>
+                        <strong>
+                            &lt;em&gt;
+                        </strong>
+                         <em>làm văn bản in nghiêng và cũng thể hiện rằng văn bản đó có ý nghĩa nhấn mạnh (emphasis).</em>
+                    </p> 
+                    
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;small&gt; Element
+                </strong>
+                <dd>
+                    Phần tử <strong>&lt;small&gt;</strong> trong HTML xác định văn bản có kích thước nhỏ hơn.
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;mark&gt; Element
+                </strong>
+                <dd>
+                    Phần tử <strong>&lt;mark&gt;</strong> trong HTML xác định văn bản cần được đánh dấu hoặc làm nổi bật.
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;del&gt; Element
+                </strong>
+                <dd>
+                    Phần tử <strong>&lt;del&gt;</strong> trong HTML xác định văn bản đã bị xóa khỏi tài liệu. Các trình duyệt thường hiển thị văn bản bị xóa bằng cách gạch ngang qua nó.
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;ins&gt; Element
+                </strong>
+                <dd>
+                    Phần tử <strong>&lt;ins&gt;</strong> trong HTML xác định văn bản đã được chèn vào tài liệu. Các trình duyệt thường hiển thị văn bản được chèn bằng cách gạch chân.
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;sub&gt; Element
+                </strong>
+                <dd>
+                    Phần tử <strong>&lt;sub&gt;</strong> trong HTML dùng để hiển thị văn bản chỉ số dưới, thường dùng cho công thức hóa học như H<sub>2</sub>O.
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;sup&gt; Element
+                </strong>
+                <dd>
+                    Phần tử <strong>&lt;sup&gt; </strong> trong HTML dùng để hiển thị văn bản chỉ số trên, thường dùng cho chú thích chân trang như WWW[1].
+                </dd>
+            </dt>
+        </dl>
+    </dd>
+    <dt><strong>- HTML Quotation and Citation Elements</strong></dt>
+    <dd>
+        <dl>
+            <dt>
+                <strong>
+                    HTML &lt;blockquote&gt; for Quotations
+                </strong>
+                <dd>
+                    Phần tử <strong>&lt;blockquote&gt;</strong> trong HTML dùng để trích dẫn từ nguồn khác và thường được thụt lề trong trình duyệt.
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;q&gt; for Short Quotations   
+                </strong>
+                <dd>
+                    Thẻ <strong>&lt;q&gt;</strong> trong HTML xác định một đoạn trích ngắn.
+                        Các trình duyệt thường thêm dấu ngoặc kép xung quanh đoạn trích.
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;abbr&gt; for Abbreviations
+                </strong>
+                <dd>
+                    Thẻ <strong>&lt;abbr&gt;</strong> trong HTML dùng để đánh dấu từ viết tắt hoặc tên gọi tắt, cung cấp thông tin cho trình duyệt và công cụ tìm kiếm
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;address&gt; for Contact Information
+                </strong>
+                <dd>
+                    Thẻ <strong>&lt;address&gt;</strong> trong HTML dùng để xác định thông tin liên lạc của tác giả hoặc chủ sở hữu tài liệu, thường được hiển thị in nghiêng với dòng ngắt trước và sau.
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;cite&gt; for Work Title   
+                </strong>
+                <dd>
+                    Thẻ <strong>&lt;cite&gt;</strong> trong HTML dùng để xác định tiêu đề của một tác phẩm sáng tạo, thường hiển thị in nghiêng
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    HTML &lt;dob&gt; for Bi-Directional Overrid   
+                </strong>
+                <dd>
+                    DO là viết tắt của Bi-Directional Override.
+                    Thẻ <strong>&lt;dob&gt;</strong> trong HTML được sử dụng để ghi đè hướng văn bản hiện tại.
+                </dd>
+            </dt>
+        </dl>
+    </dd>
+
+
+
+    <dt><strong>- HTML Comments</strong></dt>
+    <dd>
+        <dl>
+            <dt>
+                <strong>
+                    HTML Comment Tag
+                </strong>
+                <dd>
+                    <p>
+                        Thẻ bình luận trong HTML được sử dụng để thêm chú thích hoặc ghi chú vào mã nguồn mà không hiển thị trên trang web. VD:
+                    </p>
+                    <p>
+                        &lt;!-- Đây là một bình luận --&gt;
+                    </p>
+                </dd>
+            </dt>
+        </dl>
+    </dd>
+    <dt><strong>- HTML Styles - CSS</strong></dt>
+    <dd>
+        <dl>
+            <dt>
+                <strong>
+                    What is CSS?
+                </strong>
+                <dd>
+                    CSS được sử dụng để định dạng bố cục trang web, bao gồm màu sắc, phông chữ, kích thước văn bản, khoảng cách, hình nền, và hiển thị cho các thiết bị và kích thước màn hình khác nhau
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    Using CSS
+                </strong>
+                <dd>
+                    CSS có thể được thêm vào HTML theo 3 cách: inline (thuộc tính style trong phần tử), internal (thẻ &lt;style&gt; trong phần &lt;head&gt;), và external (thẻ &lt;link&gt; liên kết với file CSS ngoài). Cách phổ biến là sử dụng file CSS ngoài.
+                </dd>
+            </dt>
+            <dt>
+                <strong>Inline CSS</strong>
+                <dd>
+                    <p>CSS nội tuyến áp dụng kiểu dáng cho một phần tử HTML duy nhất thông qua thuộc tính style. VD:</p>
+                    <p><strong>&lt;h1 style="color:red;"&gt;This is a heading&lt;/h1&gt;</strong></p>
+                    <h1 style="color:red;">This is a heading</h1>
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    Internal CSS
+                </strong>
+                <dd>
+                    <p>
+                        CSS nội bộ được sử dụng để định nghĩa kiểu dáng cho một trang HTML duy nhất.
+                    </p>
+                    <p>
+                        CSS nội bộ được định nghĩa trong phần &lt;head&gt; của trang HTML, trong thẻ &lt;style&gt;.
+                    </p>
+                    <p>
+                        Ví dụ dưới đây đặt màu văn bản của tất cả các phần tử &lt;h1&gt; (trên trang đó) thành màu xanh dương, màu văn bản của tất cả các phần tử &lt;p&gt; thành màu đỏ, và trang sẽ có nền màu "powderblue".
+                    </p>
+                </dd>
+            </dt>
+            <dt>
+                <strong>
+                    External CSS
+                </strong>
+                <dd>
+                    <p>
+                        Bảng kiểu ngoại được sử dụng để định nghĩa kiểu dáng cho nhiều trang HTML.
+                    </p>
+                    <p>
+                        Để sử dụng bảng kiểu ngoại, bạn cần thêm một liên kết đến nó trong phần &lt;head&gt; của mỗi trang HTML.
+                    </p>
+                </dd>
+            </dt>
+        </dl>
+    </dd>
+</dl>
+</body>
+</html>
