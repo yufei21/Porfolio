@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial - W3Schools Clone</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000;
+        }
+        .navbar-container {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            background-color: #04AA6D;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+        .navbar {
+            display: flex;
+            min-width: 100%;
+        }
+        .navbar a {
+            color: white;
+            font-size: 18px;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        .navbar a:hover {
+            background-color: #038e5f;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            left: 0;
+            top: 50px;
+            background-color: #D9EEE1;
+            padding-top: 10px;
+            overflow-y: scroll;
+            border-right: 1px solid #ccc;
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+        .sidebar-container {
+            height: calc(100vh - 50px);
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+        .sidebar a {
+            padding: 10px 20px;
+            display: block;
+            color: #000;
+            font-size: 16px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .sidebar a:hover {
+            background-color: #bad8c0;
+        }
+        .content {
+            margin-top: 60px;
+            margin-left: 270px;
+            padding: 20px;
+            max-width: 800px;
+            height: 300vh; /* Tạo nội dung dài hơn để dễ cuộn */
+        }
+        .content h1 {
+            color: #04AA6D;
+            font-size: 32px;
+        }
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #04AA6D;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="#home">HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#js">JavaScript</a>
+            <a href="#contact">Liên hệ</a>
+            <a href="#extra1">Thêm 1</a>
+            <a href="#extra2">Thêm 2</a>
+            <a href="#extra3">Thêm 3</a>
+            <a href="#extra4">Thêm 4</a>
+            <a href="#extra5">Thêm 5</a>
+            <a href="#extra6">Thêm 6</a>
+            <a href="#extra7">Thêm 7</a>
+            <a href="#extra8">Thêm 8</a>
+            <a href="#extra1">Thêm 9</a>
+            <a href="#extra2">Thêm 10</a>
+            <a href="#extra3">Thêm 11</a>
+            <a href="#extra4">Thêm 12</a>
+            <a href="#extra5">Thêm 13</a>
+            <a href="#extra6">Thêm 14</a>
+            <a href="#extra7">Thêm 15</a>
+            <a href="#extra8">Thêm 16</a>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-container">
+            <a href="#intro">Giới thiệu</a>
+            <a href="#basics">Cơ bản</a>
+            <a href="#elements">Thành phần</a>
+            <a href="#forms">Biểu mẫu</a>
+            <a href="#tables">Bảng</a>
+            <a href="#styles">CSS</a>
+            <a href="#scripts">JavaScript</a>
+            <a href="#more">Thêm nội dung</a>
+            <a href="#more2">Thêm nữa</a>
+            <a href="#more3">Càng thêm</a>
+            <a href="#more4">Thêm 4</a>
+            <a href="#more5">Thêm 5</a>
+            <a href="#more6">Thêm 6</a>
+            <a href="#more7">Thêm 7</a>
+            <a href="#more8">Thêm 8</a>
+            <a href="#more9">Thêm 9</a>
+            <a href="#more4">Thêm 10</a>
+            <a href="#more5">Thêm 11</a>
+            <a href="#more6">Thêm 12</a>
+            <a href="#more7">Thêm 13</a>
+            <a href="#more8">Thêm 14</a>
+            <a href="#more9">Thêm 1515</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>HTML Tutorial</h1>
+        <p>HTML là ngôn ngữ đánh dấu chuẩn để tạo trang web. Học HTML giúp bạn hiểu cấu trúc cơ bản của web.</p>
+        <h2>Giới thiệu về HTML</h2>
+        <p>HTML viết tắt của HyperText Markup Language, là ngôn ngữ dùng để xây dựng trang web.</p>
+        <h2>Cấu trúc cơ bản</h2>
+        <p>Một trang HTML thường có cấu trúc như sau:</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề trang&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Chào mừng đến với HTML&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <p style="margin-top: 100vh;">Bạn đã cuộn được một đoạn dài!</p>
+    </div>
+</body>
+</html>
