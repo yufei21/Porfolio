@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Đăng Ký</title>
+  <style>
+    form {
+      width: 400px;
+      border: 1px solid #999;
+      padding: 20px;
+      font-family: Arial;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    .title {
+      text-align: center;
+      color: purple;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<form id="registerForm">
+  <div class="title">FORM ĐĂNG KÝ</div>
+
+  <label>Họ
+    <input type="text" id="ho" name="ho">
+  </label>
+
+  <label>Tên
+    <input type="text" id="ten" name="ten">
+  </label>
+
+  <label>Ngày sinh:
+    <select name="ngay">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+    <select name="thang">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+    <select name="nam">
+      <option value="1980">1980</option>
+      <option value="1981">1981</option>
+    </select>
+  </label>
+
+  <label>Giới tính:
+    <input type="radio" name="gioitinh" value="Nam"> Nam
+    <input type="radio" name="gioitinh" value="Nữ"> Nữ
+  </label>
+
+  <label>Số điện thoại
+    <input type="text" id="sdt" name="sdt">
+  </label>
+
+  <label>Sở thích:
+    <input type="checkbox" name="sothich" value="Đọc sách"> Đọc sách
+    <input type="checkbox" name="sothich" value="Xem phim"> Xem phim
+    <input type="checkbox" name="sothich" value="Nghe nhạc"> Nghe nhạc
+    <input type="checkbox" name="sothich" value="Đá bóng"> Đá bóng
+  </label>
+
+  <label>Khác:
+    <textarea name="khac" rows="3" cols="30"></textarea>
+  </label>
+
+  <br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+</form>
+
+<script>
+  document.getElementById("registerForm").addEventListener("submit", function(event) {
+    const ho = document.getElementById("ho").value.trim();
+    const ten = document.getElementById("ten").value.trim();
+    const sdt = document.getElementById("sdt").value.trim();
+
+    if (ho === "" || ten === "" || sdt === "") {
+      alert("Vui lòng nhập đầy đủ họ, tên và số điện thoại.");
+      event.preventDefault();
+      return;
+    }
+
+    if (!/^\d{10}$/.test(sdt)) {
+      alert("Số điện thoại phải là 1 số và có đúng 10 chữ số.");
+      event.preventDefault();
+    }
+  });
+</script>
+<button onclick="doiMauNen()">Đổi màu nền</button>
+
+  <script>
+    function doiMauNen() {
+      document.body.style.backgroundColor = "lightblue";
+    }
+  </script>
+</body>
+</html>

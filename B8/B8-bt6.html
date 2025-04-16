@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thực hiện phép tính</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .operation-row {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 80px;
+        }
+        input[type="number"] {
+            width: 50px;
+        }
+        .operator {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+        .equal {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+        .result {
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        #executed-operations {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #executed-operations span {
+            margin-right: 20px;
+        }
+        .addition {
+            color: blue;
+        }
+        .subtraction {
+            color: green;
+        }
+        .multiplication {
+            color: purple;
+        }
+        .division {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>6.1 Đổi màu nền</h2>
+    <button onclick="changeBackground()">Đổi màu nền</button>
+    <h2>6.2 Thực hiện phép tính và đổi màu phép tính vừa thực hiện</h2>
+    <p><b>các phép toán</b></p>
+
+    <div class="operation-row">
+        <label>phép cộng</label>
+        <input type="number" id="add1" value="3">
+        <span class="operator">+</span>
+        <input type="number" id="add2" value="3">
+        <span class="equal">=</span>
+        <span class="result" id="addResult">6</span>
+        <button onclick="calculate('add')">Thực hiện</button>
+    </div>
+
+    <div class="operation-row">
+        <label>phép trừ</label>
+        <input type="number" id="subtract1" value="3">
+        <span class="operator">-</span>
+        <input type="number" id="subtract2" value="3">
+        <span class="equal">=</span>
+        <span class="result" id="subtractResult">0</span>
+        <button onclick="calculate('subtract')">Thực hiện</button>
+    </div>
+
+    <div class="operation-row">
+        <label>phép nhân</label>
+        <input type="number" id="multiply1" value="2">
+        <span class="operator">*</span>
+        <input type="number" id="multiply2" value="2">
+        <span class="equal">=</span>
+        <span class="result" id="multiplyResult">4</span>
+        <button onclick="calculate('multiply')">Thực hiện</button>
+    </div>
+
+    <div class="operation-row">
+        <label>phép chia</label>
+        <input type="number" id="divide1" value="3">
+        <span class="operator">/</span>
+        <input type="number" id="divide2" value="3">
+        <span class="equal">=</span>
+        <span class="result" id="divideResult">1</span>
+        <button onclick="calculate('divide')">Thực hiện</button>
+    </div>
+
+    <p id="executed-operations">
+        <b>Các phép toán vừa thực hiện</b><br>
+        <span id="last-addition" class="addition"></span>
+        <span id="last-subtraction" class="subtraction"></span>
+        <span id="last-multiplication" class="multiplication"></span>
+        <span id="last-division" class="division"></span>
+    </p>
+
+    <script>
+        function changeBackground() {
+    const colors = ["#f8f9fa", "#e6f7ff", "#fff3cd", "#d4edda", "#fce4ec", "#f0f0f0"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+    }  
+        function calculate(operation) {
+            let num1, num2, resultElement, result;
+            let executedOperationsDiv = document.getElementById('executed-operations');
+            let lastAdditionSpan = document.getElementById('last-addition');
+            let lastSubtractionSpan = document.getElementById('last-subtraction');
+            let lastMultiplicationSpan = document.getElementById('last-multiplication');
+            let lastDivisionSpan = document.getElementById('last-division');
+
+            switch (operation) {
+                case 'add':
+                    num1 = parseFloat(document.getElementById('add1').value);
+                    num2 = parseFloat(document.getElementById('add2').value);
+                    resultElement = document.getElementById('addResult');
+                    result = num1 + num2;
+                    lastAdditionSpan.textContent = `${num1}+${num2}=${result}`;
+                    break;
+                case 'subtract':
+                    num1 = parseFloat(document.getElementById('subtract1').value);
+                    num2 = parseFloat(document.getElementById('subtract2').value);
+                    resultElement = document.getElementById('subtractResult');
+                    result = num1 - num2;
+                    lastSubtractionSpan.textContent = `${num1}-${num2}=${result}`;
+                    break;
+                case 'multiply':
+                    num1 = parseFloat(document.getElementById('multiply1').value);
+                    num2 = parseFloat(document.getElementById('multiply2').value);
+                    resultElement = document.getElementById('multiplyResult');
+                    result = num1 * num2;
+                    lastMultiplicationSpan.textContent = `${num1}*${num2}=${result}`;
+                    break;
+                case 'divide':
+                    num1 = parseFloat(document.getElementById('divide1').value);
+                    num2 = parseFloat(document.getElementById('divide2').value);
+                    resultElement = document.getElementById('divideResult');
+                    if (num2 === 0) {
+                        result = "Không xác định";
+                        lastDivisionSpan.textContent = `${num1}/${num2}=${result}`;
+                    } else {
+                        result = num1 / num2;
+                        lastDivisionSpan.textContent = `${num1}/${num2}=${result}`;
+                    }
+                    break;
+                default:
+                    return;
+            }
+
+            resultElement.textContent = result;
+        }
+    </script>
+</body>
+</html>
