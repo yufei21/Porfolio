@@ -1,0 +1,233 @@
+@font-face {
+    font-family: function;
+    src: url(https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Liter&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(31, 31, 39);
+}
+
+
+.background-pic {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.background-pic img{
+    width: auto;
+    height: 100%;
+}
+
+/* ------------------Header------------------ */
+.header {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    color: white;
+    height: 80px;
+    z-index: 4;
+    align-content: center; 
+}
+
+.logo-header {
+    justify-content: center;
+    list-style: none;
+    line-height: 70px;
+    text-align: center;
+    width: auto;
+    padding: 5px;
+    margin-left: 30px;
+    font-size: 28px;
+}
+
+
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: space-evenly;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    font-family: function, sans-serif;
+}
+
+.nav {
+    font-size: 18px;
+    margin: 0px 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 1px;
+    background: white;
+    transition: 0.4s;
+}
+
+.nav:hover:after {
+    left: 0%;
+    width: 100%;
+}
+
+.subnav {
+    list-style-type: none;
+    padding: 8px;
+    position: absolute;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    margin: 5px;
+    width: 200px;
+    display: none;
+}
+
+.subnav li {
+    cursor: pointer;
+    position: relative;
+    margin: 6px 12px;
+    padding-top: 5px;
+}
+
+.nav:hover .subnav {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: function, sans-serif;
+    font-size: 14px;
+    position: relative;
+}
+
+.subnav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 1px;
+    background: black;
+    transition: 0.4s;
+}
+.subnav a:hover:after {
+    left: 0%;
+    width: 100%;
+}
+
+
+/* New Arrivals */
+.new-arrivals {
+    padding: 12px;
+    margin-top: 30px;
+}
+
+.head {
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    padding: 12px 8px;
+    font-weight: 100;
+}
+
+.item-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.item-in {
+    width: 350px;
+    height: 520px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.pic {
+    width: 100%;
+    position: relative;
+    height: 445px;
+    overflow: hidden;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 12px;
+}
+
+.pic > img.lop1 {
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.item-in:hover .lop1 {
+    opacity: 0;;
+}
+
+.pic > img.lop2 {
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.item-in:hover .lop2 {
+    opacity: 1;
+}
+
+.des {
+    color: black;
+    font-size: 20px;
+    padding: 8px 12px;
+}
+
+.name-and-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.caption {
+    font-size: 16px;
+    padding: 8px 0px;
+    color: #464444;
+}
+
+.quay-lai {
+    text-align: center;
+    height: 80px;
+    align-content: center;
+}
+
+.quay-lai a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    background-color: darkblue;
+    padding: 12px 12px;
+    border-radius: 10px;
+}
