@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM và HTML cơ bản</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f3ff;
+      padding: 20px;
+    }
+    h1 {
+      color: blue;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 8px 16px;
+      background: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: lightblue;
+    }
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Bài 1 – Làm Lại Các Ví Dụ DOM</h1>
+
+<!-- 1. getElementsByTagName -->
+<div class="box">
+  <h2>Ví Dụ 1:getElementsByTagName</h2>
+  <p>Hello World!</p>
+  <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+  <p id="demo-tagname"></p>
+  <script>
+    var x = document.getElementsByTagName("p");
+    document.getElementById("demo-tagname").innerHTML =
+      'The text in first paragraph is: ' + x[0].innerHTML;
+  </script>
+</div>
+
+<!-- 2. getElementsByClassName -->
+<div class="box">
+  <h2>Ví Dụ 2:Finding HTML Elements by Class Name</h2>
+  <p>Hello World!</p>
+  <p class="intro">The DOM is very useful.</p>
+  <p>This example demonstrates the <b>getElementsByClassName</b> method.</p>
+  <p id="demo"></p>
+
+  <script>
+  var x = document.getElementsByClassName("intro");
+  document.getElementById("demo").innerHTML =
+  "The first paragraph (index 0) with class='intro' : " + x[0].innerHTML;
+  </script>
+</div>
+
+<!-- 3. Thay đổi thuộc tính -->
+<div class="box">
+  <h2>Ví Dụ 3 </h2>
+  <h1 id="id01">Old Heading</h1>
+
+<script>
+var element = document.getElementById("id01");
+element.innerHTML = "New Heading";
+</script>
+</div>
+
+<!-- 4. addEventListener -->
+<div class="box">
+  <h2>Ví Dụ 4</h2>
+  <img id="myImage" src="https://i.pinimg.com/736x/08/98/88/0898889e602912c9ab9b4599bdb2ad9a.jpg">
+
+<script>
+document.getElementById("myImage").src = "https://i.pinimg.com/736x/08/98/88/0898889e602912c9ab9b4599bdb2ad9a.jpg";
+</script>
+</div>
+
+<!-- 5. replaceChild -->
+<div class="box">
+  <h2>Ví Dụ 5</h2>
+  <p id="par">Click me</p>
+
+<script>
+var pa = document.getElementById("par");
+
+pa.addEventListener("click", myFunction);
+pa.addEventListener("click", someOtherFunction);
+
+function myFunction() {
+  alert("Hello World!");
+}
+
+function someOtherFunction() {
+  alert("This function was also executed!");
+}
+</script>
+</div>
+
+<!-- 6. insertBefore -->
+<div class="box">
+  <h2>Ví Dụ 6</h2>
+
+  <p id="p1">p1. This is a paragraph.</p>
+  <p id="p2">p2. This is another paragraph.</p>
+  <button onclick="remove_node1('p1')">remove node</button>
+
+  <div id="container">
+    <p id="p3">p1. This is p3 paragraph.</p>
+    <p id="p4">p2. This is p4 paragraph.</p>
+    <button onclick="remove_node2('container', 'p4')">remove node</button>
+  </div>
+
+  <script>
+    function remove_node1(x) {
+      var elmnt = document.getElementById(x);
+      elmnt.remove();
+    }
+
+    function remove_node2(x, y) {
+      var cha = document.getElementById(x);
+      var con = document.getElementById(y);
+      cha.removeChild(con);
+    }
+  </script>
+</div>
+
+<!-- 7. removeChild -->
+<div class="box">
+  <h2>Ví Dụ 7</h2>
+  <div id="container2">
+    <h1 id="heading1">Xin chào Tên Tôi Là</h1>
+    <p id="logOldValue"></p>
+    <button onclick="changeHeading()">Thay đổi nội dung</button>
+  </div>
+
+  <script>
+    function changeHeading() {
+      var pt = document.getElementById("heading1");
+      var old = pt.innerHTML;
+      document.getElementById("logOldValue").innerText = "Giá trị h1 cũ là: " + old;
+      pt.innerHTML = "Tôi Học Tại Trường Đại Học Thủ Đô Hà Nội";
+    }
+  </script>
+</div>
+
+<!-- 8. add new element -->
+<div class="box">
+  <h2>Ví Dụ 8</h2>
+  <div id="container8">
+    <p>the paragraph 1</p>
+  </div>
+
+  <script>
+    var phantu = document.createElement('h1');
+    phantu.innerHTML = "nội dung thẻ h1";
+    var bien = document.getElementById('container8');
+    bien.appendChild(phantu);
+  </script>
+</div>
+
+<!-- 9. add images dynamically -->
+<div class="box">
+  <h2>Ví Dụ 9</h2>
+  <div id="bo"></div>
+  <button onclick="addnode_img();">add images</button>
+
+  <script>
+    function addnode_img() {
+      var pt = document.createElement('img');
+      pt.src = "https://i.pinimg.com/736x/08/98/88/0898889e602912c9ab9b4599bdb2ad9a.jpg"; 
+      document.getElementById("bo").appendChild(pt);
+    }
+  </script>
+</div>
+
+<!-- Ví Dụ 10 -->
+<div class="box">
+  <h2>Ví Dụ 10</h2>
+  <div id="container">
+    <p id="p1">the first paragraph</p>
+    <p id="p2">the second paragraph</p>
+  </div>
+
+  <button onclick="addnode()">add node</button>
+
+  <script>
+    function addnode() {
+      // Tạo một thẻ p mới
+      var x = document.createElement('p');
+      x.className = "p3";
+      x.innerText = "the new one";
+
+      // Lấy phần tử container và phần tử p2
+      var cha = document.getElementById("container");
+      var y = document.getElementById("p2");
+
+      // Đảm bảo rằng phần tử container và p2 đã tồn tại trước khi thực hiện
+      if (cha && y) {
+        cha.insertBefore(x, y); // Thêm thẻ mới vào trước p2
+      }
+    }
+  </script>
+</div>
+
+<!-- Ví Dụ 11 -->
+<div class="box">
+  <h2>Ví Dụ 11</h2>
+  <div id="container">
+    <p id="p1">the first paragraph</p>
+    <p id="p2">the second paragraph</p>
+    <button onclick="changenode()">change node</button>
+  </div>
+
+  <script>
+    function changenode() {
+      // Tạo một thẻ div mới
+      var node = document.createElement('div');
+      node.innerText = "The new one";
+
+      // Lấy phần tử container và p2
+      var x = document.getElementById("container");
+      var y = document.getElementById("p2");
+
+      // Đảm bảo rằng phần tử container và p2 đã tồn tại trước khi thay thế
+      if (x && y) {
+        x.replaceChild(node, y); // Thay thế p2 bằng div mới
+      }
+    }
+  </script>
+</div>
+
+<div class="box">
+  <h2>Ví Dụ 12</h2>
+  <p><a href="https://tanh-y.github.io/vd12buoi10/"_blank">👉 Nhấn vào đây để xem ví dụ</a></p>
+</div>
+
+</body>
+</html>

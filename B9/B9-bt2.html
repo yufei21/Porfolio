@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Đa Cấp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      background-color: #f5f5f5;
+    }
+    .menu {
+      width: 200px;
+      position: relative;
+    }
+    .menu-btn {
+      background-color: #1976d2;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+    }
+    .submenu {
+      display: none;
+      background-color: #eee;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      margin-top: 0;
+      animation: slideDown 0.3s ease-out;
+    }
+    .submenu div {
+      padding: 10px 15px;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+    }
+    .submenu div:last-child {
+      border-bottom: none;
+    }
+    .submenu div:hover {
+      background-color: #ddd;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <button class="menu-btn" onclick="toggleMenu()">Thiết kế web</button>
+    <div class="submenu" id="submenu">
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>Javascript</div>
+    </div>
+  </div>
+  <script>
+    function toggleMenu() {
+      const submenu = document.getElementById('submenu');
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
